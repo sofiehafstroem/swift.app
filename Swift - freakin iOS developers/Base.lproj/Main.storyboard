@@ -18,7 +18,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello world!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NI3-vh-Fwi">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8FF-4J-69Q">
+                                <frame key="frameInset" minX="142" minY="198" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Dbk-t7-LRJ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0z-Pb-ihR">
+                                <frame key="frameInset" minX="164" minY="70" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dAT-19-8tf"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uhu-Up-X7n">
+                                <frame key="frameInset" minX="142" minY="129" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="xEC-Re-Vce"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTl-WL-jyU">
+                                <frame key="frameInset" minX="164" width="42" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="LCt-Jk-Vf6"/>
+                                    <constraint firstAttribute="width" constant="100" id="gUQ-2P-Jm9"/>
+                                    <constraint firstAttribute="height" constant="50" id="tJn-LV-xaz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -26,16 +57,24 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NI3-vh-Fwi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="TA2-hw-c4B"/>
-                            <constraint firstItem="NI3-vh-Fwi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wre-4Q-MLS"/>
+                            <constraint firstItem="r0z-Pb-ihR" firstAttribute="top" secondItem="JTl-WL-jyU" secondAttribute="bottom" constant="-6" id="1w7-DJ-pGr"/>
+                            <constraint firstItem="Uhu-Up-X7n" firstAttribute="top" secondItem="r0z-Pb-ihR" secondAttribute="bottom" constant="51" id="Xco-GJ-Tai"/>
+                            <constraint firstItem="r0z-Pb-ihR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dfu-dt-PPq"/>
+                            <constraint firstItem="8FF-4J-69Q" firstAttribute="top" secondItem="Uhu-Up-X7n" secondAttribute="bottom" constant="39" id="fmV-C8-LX4"/>
+                            <constraint firstItem="JTl-WL-jyU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n4W-au-8pT"/>
+                            <constraint firstItem="8FF-4J-69Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wJn-X1-Z30"/>
+                            <constraint firstItem="Uhu-Up-X7n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yeg-6v-erx"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="CoolLabel" destination="NI3-vh-Fwi" id="B8N-Ah-lcl"/>
+                        <outlet property="CoolLabel" destination="JTl-WL-jyU" id="4Ud-HW-fKg"/>
+                        <outlet property="Text1" destination="Uhu-Up-X7n" id="apw-IP-wmG"/>
+                        <outlet property="Text2" destination="8FF-4J-69Q" id="kER-67-Umi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="48.799999999999997" y="109.29535232383809"/>
         </scene>
     </scenes>
 </document>
